@@ -8,10 +8,10 @@
 fun main() {
     println("Please type a number for calculate the factorial: ")
 
-    val input = readln()
+    val input = readln().toIntOrNull()
 
-    if (input.toIntOrNull() != null && input.toIntOrNull()!! >= 0) {
-        println(FirstFactorial(input.toIntOrNull()!!))
+    if (input != null && input >= 0) {
+        println(FirstFactorial(input))
     } else {
         println("Invalid Value!")
     }
@@ -19,13 +19,17 @@ fun main() {
 
 fun FirstFactorial(num: Int): Int {
 
-    var factorial = 1
+    if (num >= 0) {
+        var factorial = 1
 
-    if (num > 0) {
-        for (i in 1..num) {
-            factorial *= i
+        if (num > 0) {
+            for (i in 1..num) {
+                factorial *= i
+            }
         }
+
+        return factorial
     }
 
-    return factorial
+    return -1
 }
