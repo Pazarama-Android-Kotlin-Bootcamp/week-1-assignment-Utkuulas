@@ -11,7 +11,12 @@
 * */
 
 fun main() {
+
+    println("Please type length of the array: ")
+
     val arCount = readln()!!.trim().toInt()
+
+    println("Please type numbers leaving a white space between them: ")
 
     val ar = readln()!!.trimEnd().split(" ").map { it.toLong() }.toTypedArray()
 
