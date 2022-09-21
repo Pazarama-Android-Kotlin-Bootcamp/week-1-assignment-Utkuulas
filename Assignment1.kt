@@ -25,19 +25,19 @@ fun main() {
 }
 
 fun CodelandUsernameValidation(str: String): Boolean {
-    if (str.contains(Regex("\\W"))){
+    if (str.contains(Regex("\\W"))) {           // Checks if the input containing non-word character
         return false
     }
 
-    if (str.length < 4 || str.length > 25){
+    if (str.length < 4 || str.length > 25) {          // Checks the input length
         return false
     }
 
-    if (str.endsWith("_")){
+    if (str.endsWith("_")) {                    // Checks if the input ending with an underscore
         return false
     }
 
-    if (str.startsWith("_") || Regex("\\d").containsMatchIn(str.take(1))){
+    if (str.startsWith("_") || Regex("\\d").containsMatchIn(str.take(1))) {     // Checks if the input starts with a number
         return false
     }
 
