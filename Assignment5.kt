@@ -24,7 +24,7 @@ fun QuestionMarks(str: String): Boolean {
         if (symbol.isDigit()) {
             isPassedADigit = true
             lastDigit = symbol.digitToInt()
-            sumOfDigits = sumOfDigits + lastDigit
+            sumOfDigits += lastDigit
         }
 
         if (symbol == '?') {
@@ -33,15 +33,15 @@ fun QuestionMarks(str: String): Boolean {
 
         if (sumOfDigits >= 10) {
 
-            if (questionMarkCount < 3) {
+            if (questionMarkCount < 3) {  // Returns false if sum of numbers are equal or greater than 10 and question marks count is less than 3
                 return false
             }
 
-            sumOfDigits = lastDigit
+            sumOfDigits = lastDigit  // Assigns last number to the sum for checking if the result of addition of next number is equal or greater than 10
             questionMarkCount = 0
         }
 
-        isPassedADigit = false
+        isPassedADigit = false  // Resets the boolean value at the end of loop
     }
 
     return true
