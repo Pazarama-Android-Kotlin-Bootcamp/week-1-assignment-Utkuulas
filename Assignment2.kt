@@ -14,11 +14,11 @@ fun main() {
 
     println("Please type length of the array: ")
 
-    val arCount = readln()!!.trim().toInt()          // Removes whitespaces from input and converts it to an integer
+    val arCount = readln()!!.trim().toInt()          // Removes whitespaces from the input and converts to an integer
 
     println("Please type numbers leaving a white space between them: ")
 
-    val ar = readln()!!.trimEnd().split(" ").map { it.toLong() }.toTypedArray()  // Removes whitespaces from input and converts it to a long array
+    val ar = readln()!!.trimEnd().split(" ").map { it.toLong() }.toTypedArray()  // Removes whitespaces from the input and converts to a long array
 
     val result = aVeryBigSum(ar)
 
