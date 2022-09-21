@@ -8,9 +8,9 @@
 fun main() {
     println("Please type a number for calculate the factorial: ")
 
-    val input = readln().toIntOrNull()
+    val input = readln().toIntOrNull()            // Converts the input to an integer
 
-    if (input != null && input >= 0) {
+    if (input != null && input >= 0) {            // Checks if the input is null
         println(FirstFactorial(input))
     } else {
         println("Invalid Value!")
